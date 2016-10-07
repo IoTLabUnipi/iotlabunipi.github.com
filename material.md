@@ -25,4 +25,3 @@ group: navigation
 ## Californium 
 * Californium [home page](http://www.eclipse.org/californium/)
 * A more detailed presentation on Californium can be found here [here](https://www.eclipsecon.org/france2014/sites/default/files/slides/Hands-on%20with%20CoAP.pdf)
-
