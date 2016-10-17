@@ -25,3 +25,7 @@ group: navigation
 ## Californium 
 * Californium [home page](http://www.eclipse.org/californium/)
 * A more detailed presentation on Californium can be found here [here](https://www.eclipsecon.org/france2014/sites/default/files/slides/Hands-on%20with%20CoAP.pdf)
+
+##OM2M
+* OM2M [homepage](http://www.eclipse.org/om2m/)
+* OM2M [Configuration](http://wiki.eclipse.org/OM2M/one/Clone)
