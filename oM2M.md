@@ -11,38 +11,38 @@ group: navigation
 * Apache Maven
 * Oracle Java 8
 ### Install Git
-```bash
+```
 $ sudo apt-get install git
 ```
 ### Install Apache Maven
-```bash
+```
 $ sudo apt-get install maven
 ```
 ### Install Oracle Java 8
-```bash
+```
 $ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
 $ sudo apt-get install oracle-java8-installer
 ```
 ##### Configure JAVA_HOME 
 To set this environment variable, we will first need to find out where Java is installed. You can do this by executing:
-```bash
+```
 $ sudo update-alternatives --config java
 ```
 Copy the path from your preferred installation and then open `/etc/environment` using nano or your favorite text editor.
-```bash
+```
 $ sudo nano /etc/environment
 ```
 At the end of this file, add the following line, making sure to replace the highlighted path with your own copied path.
-```vim
+```
 JAVA_HOME="/usr/lib/jvm/java-8-oracle"
 ```
 Save and exit the file, and reload it.
-```bash
+```
 $ source /etc/environment
 ```
 You can now test whether the environment variable has been set by executing the following command:
-```bash
+```
 $ echo $JAVA_HOME
 ```
 This will return the path you just set.
