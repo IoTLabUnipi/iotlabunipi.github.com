@@ -10,20 +10,24 @@ group: navigation
 * Git
 * Apache Maven
 * Oracle Java 8
+
 ### Install Git
 ```
 $ sudo apt-get install git
 ```
+
 ### Install Apache Maven
 ```
 $ sudo apt-get install maven
 ```
+
 ### Install Oracle Java 8
 ```
 $ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
 $ sudo apt-get install oracle-java8-installer
 ```
+
 ##### Configure JAVA_HOME 
 To set this environment variable, we will first need to find out where Java is installed. You can do this by executing:
 ```
