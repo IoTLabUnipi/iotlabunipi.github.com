@@ -11,17 +11,17 @@ group: navigation
 * Apache Maven
 * Oracle Java 8
 
-## Install Git
+#### Install Git
 ```
 $ sudo apt-get install git
 ```
 
-## Install Apache Maven
+#### Install Apache Maven
 ```
 $ sudo apt-get install maven
 ```
 
-## Install Oracle Java 8
+#### Install Oracle Java 8
 ```
 $ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
@@ -53,8 +53,10 @@ This will return the path you just set.
 
 # Configure Eclipse for developing oM2M
 First of all, install the lastest [Eclipse for RCP and RAP Developers](http://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/neon1a) (at time of writing Eclipse Neon 1).
+
 ### Install Tycho Plugin
 Click Window -> Preferences -> maven -> discovery -> open catalog and type Tycho. Check the “Tycho Configurator” checkbox and install the connector.
+
 ### Clone oM2M repository
 * Select Window->Show View -> Other .
 * In the dialog box, select the Git view.
@@ -65,6 +67,7 @@ Click Window -> Preferences -> maven -> discovery -> open catalog and type Tycho
 * This will clone the oM2M repository inside: `$HOME/git/`
 
 # Build oM2M
+
 ### Build from shell
 Replace the $HOME with your home folder path.
 ```bash
@@ -74,6 +77,7 @@ $ mvn clean install
 ### Build from Eclipse
 * Select “org.eclipse.om2m” package and right click
 * Select “Run as -> maven install”
+
 #### Build Results
 Two Eclipse products will be generated after a successful built:
 * The IN product can be found on this *generic* directory:
