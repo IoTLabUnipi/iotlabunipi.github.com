@@ -8,3 +8,4 @@ group: navigation
 
 * [Installation](oM2M_installation)
 * [Configuration](oM2M_configuration)
+* [Start](oM2M_startup)
