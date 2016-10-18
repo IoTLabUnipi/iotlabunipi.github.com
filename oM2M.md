@@ -6,4 +6,5 @@ group: navigation
 ---
 {% include JB/setup %}
 
-* [Installation](oM2M_Installation)
+* [Installation](oM2M_installation)
+* [Configuration](oM2M_configuration)
