@@ -11,17 +11,17 @@ group: navigation
 * Apache Maven
 * Oracle Java 8
 
-### Install Git
+## Install Git
 ```
 $ sudo apt-get install git
 ```
 
-### Install Apache Maven
+## Install Apache Maven
 ```
 $ sudo apt-get install maven
 ```
 
-### Install Oracle Java 8
+## Install Oracle Java 8
 ```
 $ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
