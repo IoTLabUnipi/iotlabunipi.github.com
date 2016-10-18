@@ -30,25 +30,34 @@ $ sudo apt-get install oracle-java8-installer
 
 ##### Configure JAVA_HOME 
 To set this environment variable, we will first need to find out where Java is installed. You can do this by executing:
+
 ```
 $ sudo update-alternatives --config java
 ```
+
 Copy the path from your preferred installation and then open `/etc/environment` using nano or your favorite text editor.
+
 ```
 $ sudo nano /etc/environment
 ```
+
 At the end of this file, add the following line, making sure to replace the highlighted path with your own copied path.
+
 ```
 JAVA_HOME="/usr/lib/jvm/java-8-oracle"
 ```
+
 Save and exit the file, and reload it.
+
 ```
 $ source /etc/environment
 ```
 You can now test whether the environment variable has been set by executing the following command:
+
 ```
 $ echo $JAVA_HOME
 ```
+
 This will return the path you just set.
 
 # Configure Eclipse for developing oM2M
@@ -69,50 +78,69 @@ Click Window -> Preferences -> maven -> discovery -> open catalog and type Tycho
 # Build oM2M
 
 ### Build from shell
+
 Replace the $HOME with your home folder path.
+
 ```bash
 $ cd $HOME/git
 $ mvn clean install
 ```
+
 ### Build from Eclipse
+
 * Select “org.eclipse.om2m” package and right click
 * Select “Run as -> maven install”
 
 #### Build Results
+
 Two Eclipse products will be generated after a successful built:
 * The IN product can be found on this *generic* directory:
+
 ```bash
 $HOME/git/om2m/org.eclipse.om2m/org.eclipse.om2m.site.in-cse/target/products/in-cse/<os>/<ws>/<arch>
 ```
+
 * The MN product can be found on this *generic* directory:
+
 ```bash
 $HOME/git/om2m/org.eclipse.om2m/org.eclipse.om2m.site.mn-cse/target/products/mn-cse/<os>/<ws>/<arch>
 ```
+
 * The ASN product can be found on this *generic* directory: 
+
 ```bash
 $HOME/git/om2m/org.eclipse.om2m/org.eclipse.om2m.site.asn-cse/target/products/asn-cse/<os>/<ws>/<arch>
 ```
 
 where on a linux environment running in a 64 bit machine the last part of each URI is translated to: 
+
 ```bash
 linux/gtk/x86_64
 ```
 
 # Test oM2M
+
 In the following I will assume you are using a linux environment running in a 64 bit machine, if it is not the case replace the last three segments of each URI according to your deployment.
 Go to the IN-CSE product directory: 
+
 ```
 $ cd $HOME/git/om2m/org.eclipse.om2m/org.eclipse.om2m.site.in-cse/target/products/in-cse/linux/gtk/x86_64
 ```
+
 If it is the first time you are runnin oM2M issue:
+
 ```
 $ chmod a+x start.sh
 ```
+
 In any case to start the platform:
+
 ```
 $ ./start.sh
 ```
+
 It will start the OSGi console with all the needed bundle already deployed. Type `ss` to view the list of bundles. The output will be similar to the following:
+
 ```bash
 osgi> ss
 "Framework is launched."
