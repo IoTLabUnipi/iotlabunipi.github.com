@@ -1,7 +1,8 @@
 ---
 layout: page
 title: "OM2M"
-description: ""
+description: "oM2M"
+group: navigation
 ---
 {% include JB/setup %}
 
