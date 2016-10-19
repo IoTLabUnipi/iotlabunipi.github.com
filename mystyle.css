@@ -1,0 +1,14 @@
+code { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+p code, li code {
+                        margin: 0 2px;
+                        padding: 2px 5px;
+                        white-space: nowrap;
+                        border: 1px solid #CCC;
+                        background-color: #F8F8F8;
+                        -webkit-border-radius: 3px;
+                        -moz-border-radius: 3px;
+                        border-radius: 3px;
+                        -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+                }
+
+
