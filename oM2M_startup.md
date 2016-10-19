@@ -104,4 +104,6 @@ It will start the OSGi console with all the needed bundle already deployed. Type
 * The MN-CSE automatically authenticate to the remote IN-CSE specified in the gateway configuration file. If the IN-CSE is not already running, the MN-CSE keep sending authentication requests (A request each 10 seconds).
 * After a successful authentication, the “mn-cse” resource is added to the in-cse resource tree, and respectively the “in-cse” resource is added to the mn-cse resource tree. You can now access the registered MN-CSE resource from the [IN-CSE web interface]("http://127.0.0.1:8080/webpage) under the “/in-cse/in-name/mn-cse” uri.
 * Using the In-CSE web interface you can seamlessly access to all authenticated gateways. You notice the existence of one authenticated MN-CSE with id "mn-cse".
-* Click on the "mn-cse" resource to display remote MN-CSE sub-resources and attributes. You can click on the “mn-cse” button of the “link” attribute to connect to the MN-CSE resources tree.
+* Click on the "mn-cse" resource to display remote MN-CSE sub-resources and attributes. You can click on the “mn-cse” button of the “link” attribute to connect to the MN-CSE resources tree (Located in the right table).
+* The MN-CSE resource tree will be displayed. At this moment, the IN-CSE will act as a proxy to retarget your requests to the MN-CSE.
+* Initially, also the MN-CSE contains the CseBase resource (id=mn-cse), the AccessRight resource (id=acp_admin), and other empty collections.
