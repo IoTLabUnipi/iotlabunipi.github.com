@@ -20,6 +20,18 @@ If it is the first time you are runnin oM2M issue:
 $ chmod a+x start.sh
 ```
 
+then create the `start_debug.sh` file, in order to allow to remotely debug the in-cse through Eclipse, and fill it with:
+
+```vim
+java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=4554,server=y,suspend=y -jar -ea -Declipse.ignoreApp=true -Dosgi.clean=true -Ddebug=true plugins/org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar -console -noExit
+```
+
+Note the `address=4554` which will be used for debugging purposes. Save the file and make it executable:
+
+```bash
+$ chmod a+x start_debug.sh
+```
+
 In any case to start the IN_CSE:
 
 ```bash
@@ -92,6 +104,18 @@ If it is the first time you are runnin oM2M issue:
 $ chmod a+x start.sh
 ```
 
+then create the `start_debug.sh` file, in order to allow to remotely debug the mn-cse through Eclipse, and fill it with:
+
+```vim
+java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=4555,server=y,suspend=y -jar -ea -Declipse.ignoreApp=true -Dosgi.clean=true -Ddebug=true plugins/org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar -console -noExit
+```
+
+Note the `address=4555` which will be used for debugging purposes. Save the file and make it executable:
+
+```bash
+$ chmod a+x start_debug.sh
+```
+
 In any case to start the MN_CSE:
 
 ```bash
@@ -107,3 +131,41 @@ It will start the OSGi console with all the needed bundle already deployed. Type
 * Click on the "mn-cse" resource to display remote MN-CSE sub-resources and attributes. You can click on the “mn-cse” button of the “link” attribute to connect to the MN-CSE resources tree (Located in the right table).
 * The MN-CSE resource tree will be displayed. At this moment, the IN-CSE will act as a proxy to retarget your requests to the MN-CSE.
 * Initially, also the MN-CSE contains the CseBase resource (id=mn-cse), the AccessRight resource (id=acp_admin), and other empty collections.
+
+# Debug IN-CSE
+
+* From Eclipse go to Run -> Debug Configuration
+* In the dialog box, right click on "Remote Java Application" then New
+* Give a meaningful name (e.g. *IN-CSE*) and click on "Browse" to select the main project
+* Selects "org.eclipse.om2m.core" and click "OK"
+* Sets the "Port" to **4554** and the address accordingly by avoiding DNS names (i.e. in a local environment set to 127.0.0.1)
+* Click Apply and then Debug (you will see an error that must be ignored).
+
+If you want to debug the IN-CSE go to the IN-CSE folder and start the container through the `start_debug.sh` script:
+
+```bash
+$ cd $HOME/git/om2m/org.eclipse.om2m/org.eclipse.om2m.site.in-cse/target/products/in-cse/linux/gtk/x86_64
+$ ./start_debug.sh
+```
+
+* Then in Eclipse go to Run -> Debug History -> <Name of your debug configuration> (e.g. *IN-CSE* in my example)
+* To switch Eclipse to debug mode: Window -> Prospective -> Open Prospective -> Debug
+
+# Debug MN-CSE
+
+* From Eclipse go to Run -> Debug Configuration
+* In the dialog box, right click on "Remote Java Application" then New
+* Give a meaningful name (e.g. *MN-CSE*) and click on "Browse" to select the main project
+* Selects "org.eclipse.om2m.core" and click "OK"
+* Sets the "Port" to **4555** and the address accordingly by avoiding DNS names (i.e. in a local environment set to 127.0.0.1)
+* Click Apply and then Debug (you will see an error that must be ignored).
+
+If you want to debug the MN-CSE go to the MN-CSE folder and start the container through the `start_debug.sh` script:
+
+```bash
+$ cd $HOME/git/om2m/org.eclipse.om2m/org.eclipse.om2m.site.mn-cse/target/products/mn-cse/linux/gtk/x86_64
+$ ./start_debug.sh
+```
+
+* Then in Eclipse go to Run -> Debug History -> <Name of your debug configuration> (e.g. *MN-CSE* in my example)
+* To switch Eclipse to debug mode: Window -> Prospective -> Open Prospective -> Debug

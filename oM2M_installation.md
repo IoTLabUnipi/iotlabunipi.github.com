@@ -69,7 +69,7 @@ First of all, install the lastest [Eclipse for RCP and RAP Developers](http://ww
 Click Window -> Preferences -> maven -> discovery -> open catalog and type Tycho. Check the “Tycho Configurator” checkbox and install the connector.
 
 ### Clone oM2M repository
-* Select Window->Show View -> Other .
+* Select Window->Show View -> Other.
 * In the dialog box, select the Git view.
 * Click on “Clone a Git repository”.
 * In the URI form type: https://git.eclipse.org/r/om2m/org.eclipse.om2m 

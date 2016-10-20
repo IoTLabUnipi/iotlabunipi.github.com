@@ -7,6 +7,15 @@ description: ""
 
 # Prerequisites
 
+### Postman
+
+Postman is a chrome extensions which allows to send http REST requests with custom headers.
+
+* Install Chrome
+* Install Postman extension
+
+### Californium
+
 In order to simulate CoAP connected devices, you must download Californium.
 
 * Open Eclipse
@@ -22,7 +31,7 @@ In order to simulate CoAP connected devices, you must download Californium.
 * In the Root Directory type: `$HOME/git/californium/`.
 * Click “Finish”.
 
-# Create a new Maven Project
+# Create your new Application Dedicated Node (ADN)
 
 * Open Eclipse
 * Select File -> New -> Project.
